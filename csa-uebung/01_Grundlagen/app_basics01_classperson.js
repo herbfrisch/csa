@@ -4,4 +4,4 @@ class Person {
     this.lastname = lastname;
   }
 }
-const johnDoe = new Person('Thomas', 'Müller');
+const tomMul = new Person('Thomas', 'Müller');
