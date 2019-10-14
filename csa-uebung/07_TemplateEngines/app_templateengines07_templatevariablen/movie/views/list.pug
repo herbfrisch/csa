@@ -1,0 +1,26 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    title Movie list
+    link(rel="stylesheet" href="/style.css")
+  body
+    table
+      thead
+        tr
+          th Id
+          th Title
+          th Year
+          th
+          th
+      tbody
+        - for(let movie of movies)
+          tr
+            td #{movie.id}
+            td #{movie.title}
+            td #{movie.year}
+            td
+              a(href="/movie/delete/" + movie.id) löschen
+            td
+              a(href="/movie/form/" + movie.id) bearbeiten
+    a(href="/movie/form") neu
