@@ -12,8 +12,8 @@ function doRequest(url) {
       let data = '';
       res.on('data', chunk => (data += chunk));
       res.on('end', () => resolve(data));
-      res.on('error', e => reject(e));
     });
+    req.on('error', e => reject(e));
     req.end();
   });
 }
